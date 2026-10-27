@@ -75,7 +75,7 @@ No API keys, secrets, analytics or data submission. Dynamic DOM uses safe elemen
 | Node version | `26.12.0` (pinned in `.node-version`, matches local verification) |
 | Environment secrets | None |
 
-`public/_headers` is copied into `dist/_headers`. There is no SPA routing or server function requirement. Before publication, set the final canonical URL and update the Open Graph image to an absolute production URL. The project intentionally has no invented production domain, canonical URL or `og:url`. `public/social.png` is the 1200 × 630 raster export of the original SVG social card. To regenerate it with Chrome and a running local preview, use `node scripts/browser-check.mjs --write-social-card`, then rebuild.
+`public/_headers` is copied into `dist/_headers`. There is no SPA routing or server function requirement. The live site is `https://nv-estate-vision.pages.dev/`; canonical, Open Graph URL and the absolute social image URL use this verified origin. Update these together if a custom domain is configured later. `public/social.png` is the 1200 × 630 raster export of the original SVG social card. To regenerate it with Chrome and a running local preview, use `node scripts/browser-check.mjs --write-social-card`, then rebuild.
 
 ### Publish through GitHub
 

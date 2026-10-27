@@ -1,6 +1,16 @@
 # Local verification — 27 October 2026
 
-## Cinematic gallery — latest verification
+## Cloudflare Pages launch — latest verification
+
+The user published the Git-integrated site at **https://nv-estate-vision.pages.dev/** from `main` in `navodravijay/nv-estate-vision-`. Initial source commit: `718f660`. Read-only HTTPS checks confirmed HTTP 200 for the homepage, JavaScript, CSS, social image and new gallery image, with correct MIME types. The production response includes CSP, `nosniff`, strict-origin referrer policy and disabled camera/microphone/geolocation permissions from `public/_headers`.
+
+Ran an ignored, host-allowlisted copy of the existing Chrome harness at `.browser-check/live-check.mjs` against that exact public origin, using an isolated local browser profile. **All 94 browser checks passed**, with no runtime/resource/CSP errors. Checks include live WebGL, camera/film interactions, floor/unit filters, gallery collections/thumbnails/swipe, amenity scenes, device-only preference save/restore/clear, desktop/mobile layouts, reduced motion and simulated WebGL failure. Screenshots and results are in `.browser-check/production/`; desktop hero/gallery and the mobile gallery modal were visually reviewed. Map requests were intercepted with synthetic tiles. No real enquiry was submitted and no provider tiles were downloaded. Physical-device, broader screen-reader and actual-provider map checks remain pending.
+
+The first headless run timed out taking a screenshot; a retry with a longer screenshot timeout completed the entire suite. This was a browser-capture timeout, not a confirmed application error.
+
+After the user supplied the real deployment origin, added the canonical link, `og:url` and absolute `og:image` URL in `index.html`, and updated README deployment notes. `npm.cmd run typecheck`, `npm.cmd test` (**7 passed**) and `npm.cmd run build` all passed after this metadata change. Runtime JavaScript/CSS hashes are unchanged. The existing Three.js bundle-size advisory remains. The GitHub-to-Cloudflare integration publishes pushes to `main`; future domain changes should update the three metadata URLs together.
+
+## Cinematic gallery — previous verification
 
 The gallery now has two keyboard-accessible collections: cinematic concept renders (default) and original live-model 3D studies. Added `src/gallery.ts`, `src/gallery.css`, a new AI-assisted facade detail master/JPEG/exact prompt, and updated the page markup and main scene callback. The cinematic collection reuses the existing hero and sunset terrace artwork. Collection disclosure, provenance and fictional claims are documented in `assets/README.md` and visible in the interface.
 
