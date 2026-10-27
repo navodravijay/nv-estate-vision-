@@ -1,0 +1,24 @@
+/* Architectural presentation refinements. All artwork remains local/procedural. */
+.scene-atmosphere{position:absolute;z-index:4;right:6.5%;top:265px;display:flex;flex-direction:column;gap:9px;align-items:flex-end}
+.scene-atmosphere>span{font-size:7px;letter-spacing:.18em;color:#bed0df}
+.scene-atmosphere>div{display:flex;padding:4px;border:1px solid #bdd0e33b;background:#0c1728c9;backdrop-filter:blur(18px)}
+.scene-atmosphere button{display:flex;align-items:center;justify-content:center;gap:9px;min-height:36px;padding:7px 11px;font-size:9px;color:#c2d1df}
+.scene-atmosphere button span{font-size:14px;color:#adc1d0;line-height:1}
+.scene-atmosphere button[aria-pressed=true]{background:#e0edff19;color:#fff}
+.scene-atmosphere button[aria-pressed=true] span{color:#e8d2a5}
+.hero[data-atmosphere=blue-hour]{background:radial-gradient(ellipse at 78% 38%,#223657 0%,#17283f 25%,#0f1c30 52%,#080d1b 78%)}
+.floor-tooltip{position:absolute;top:0;left:0;z-index:6;pointer-events:none;padding:10px 13px;border:1px solid #8edaf880;background:#0a1729f2;backdrop-filter:blur(10px);font:8px Arial,Helvetica,sans-serif;letter-spacing:.1em;color:#ddf5ff;white-space:nowrap;box-shadow:0 8px 28px #0003}
+.scene canvas:focus-visible{outline-offset:-12px}
+.unit-row{min-height:68px}
+.gallery-card:nth-child(2){background:radial-gradient(ellipse at 50% 20%,#243d61,#102037 75%)}
+@media(max-width:1100px) and (min-width:761px){.scene-atmosphere{top:255px;right:4.5%}.scene-atmosphere button{padding:7px 8px;font-size:8px;gap:6px}}
+@media(max-width:760px){
+  .scene-atmosphere{top:670px;left:24px;right:auto;align-items:flex-start;gap:8px}
+  .scene-atmosphere>span{font-size:6px;color:#bbcedd}
+  .scene-atmosphere>div{flex-direction:column;padding:3px}
+  .scene-atmosphere button{min-height:40px;justify-content:flex-start;padding:9px 10px;gap:7px;font-size:8px}
+  .scene-atmosphere button span{width:12px;text-align:center}
+  .hero[data-atmosphere=blue-hour]{background:radial-gradient(ellipse at 70% 65%,#243c61 0%,#14253d 28%,#0e1b2d 50%,#080d1b 84%)}
+  .floor-tooltip{display:none}
+}
+@media(prefers-reduced-motion:reduce){.scene-atmosphere *{transition:none}}

@@ -1,0 +1,24 @@
+.hero-concept{position:absolute;inset:0;z-index:0;overflow:hidden;background:#12243a}
+.hero-concept img{height:100%;width:100%;object-fit:cover;object-position:70% center}
+.hero[data-hero-mode=live] .hero-concept,.hero[data-hero-mode=live] .hero-concept-credit{display:none}
+.hero[data-hero-mode=concept] .scene-toolbar,.hero[data-hero-mode=concept] .scene-caption,.hero[data-hero-mode=concept] .scene-selection,.hero[data-hero-mode=concept] .scene-standin{display:none}
+.hero[data-hero-mode=concept] .scene-atmosphere>span,.hero[data-hero-mode=concept] .scene-atmosphere>div,.hero[data-hero-mode=concept] .scene-atmosphere>.orbit-toggle{display:none}
+.hero-mode-switch{position:absolute;right:6.5%;top:125px;z-index:5;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.hero-mode-switch>span{font-size:7px;letter-spacing:.17em;color:#d6e3e8}
+.hero-mode-switch>div{display:flex;padding:4px;border:1px solid #c0d4df55;background:#0b1726dc;backdrop-filter:blur(16px)}
+.hero-mode-switch button{font-size:10px;padding:10px 15px;min-height:38px;color:#d3e1e9}
+.hero-mode-switch button[aria-pressed=true]{background:#cfdfec22;color:white}
+.hero-project{top:228px}
+.scene-atmosphere{top:320px}
+.hero-concept-credit{position:absolute;z-index:3;right:6.5%;bottom:103px;font-size:7px;letter-spacing:.13em;color:#d0dde5;text-shadow:0 1px 8px #000}
+.hero[data-hero-mode=concept]:after{background:linear-gradient(90deg,#080d1be8 0%,#080d1baa 27%,#080d1b0a 66%),linear-gradient(0deg,#080d1be6,transparent 27%,transparent 80%,#080d1b55)}
+.hero-grain{opacity:.025}
+@media(max-width:1100px) and (min-width:761px){.hero-mode-switch{right:4.5%}.hero-mode-switch button{padding:9px 12px;font-size:9px}.scene-atmosphere{top:320px}}
+@media(max-width:760px){
+ .hero-copy{padding-top:172px}.hero-mode-switch{top:97px;left:24px;right:auto;align-items:flex-start;gap:5px}.hero-mode-switch>span{font-size:6px}.hero-mode-switch button{font-size:9px;min-height:32px;padding:7px 13px}
+ .hero-concept{top:600px;mask-image:linear-gradient(to bottom,transparent,#000 58px,#000)}.hero-concept img{object-position:71% center}
+ #home>.scene,#home>.scene-standin{top:600px;height:370px}
+ .hero-project{top:625px;left:24px;right:auto}.scene-atmosphere{top:690px}
+ .hero-concept-credit{left:24px;right:24px;bottom:92px;text-align:center;font-size:6px;line-height:1.8;letter-spacing:.1em}
+ .hero[data-hero-mode=concept]:after{background:linear-gradient(180deg,#080d1b 0%,#080d1b 43%,#080d1ba6 52%,transparent 67%,#080d1b4d 90%,#080d1b 100%),linear-gradient(90deg,#080d1b65,transparent 75%)}
+}
